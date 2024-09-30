@@ -1,15 +1,17 @@
-import React from 'react';
+import React from 'react'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import "../styles/login.css"
-const Login = () => {
+import { Link } from 'react-router-dom';
+import Login from './login';
+const Register = () => {
   return (
-<>
+    <>
   <div className="container mx-auto px-4 py-12 flex flex-col items-center justify-center h-screen container1">
     <div className="w-full max-w-md bg-white rounded shadow-md p-6 md:flex md:flex-col md:justify-center md:items-center">
       <ul className="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
         <li className="nav-item" role="presentation">
           <a
-            className="nav nav-link active"
+            className="nav nav-link "
             id="tab-login"
             data-mdb-pill-init
 
@@ -24,10 +26,9 @@ const Login = () => {
 
         <li className="nav-item" role="presentation">
           <a
-            className="nav-link"
+            className="nav-link active"
             id="tab-register"
             data-mdb-pill-init
-
             href="/Register"
             role="tab"
             aria-controls="pills-register"
@@ -64,7 +65,7 @@ const Login = () => {
             <div className="text-center">
 
               <p>
-                Not a member? <a href="#!">Register</a>
+              Not a member? <Link to="/Register">Register</Link>
               </p>
             </div>
           </form>
@@ -173,9 +174,7 @@ const Login = () => {
     </div>
   </div>
 </>
-    
-  );
-};
+  )
+}
 
-export default Login;
-
+export default Register
